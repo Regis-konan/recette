@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recettes Faciles - Découvrez la cuisine simplifiée</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800;900&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍳</text></svg>">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Recettes Faciles</h1>
+                    <p>Cuisine Simplifiée</p>
+                </div>
+            </a>
+            <div class="header-actions">
+                <button class="btn-icon" id="searchBtn" aria-label="Rechercher">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="btn-icon" id="favoritesBtn" aria-label="Mes favoris">
+                    <i class="fas fa-heart"></i>
+                    <span class="badge" id="favoritesCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- OVERLAY DE RECHERCHE -->
+    <div class="search-overlay" id="searchOverlay">
+        <button class="btn-close-search" id="closeSearch" aria-label="Fermer la recherche">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Que souhaitez-vous cuisiner aujourd'hui ?">
+                <div class="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            <div class="search-suggestions">
+                <h3><i class="fas fa-lightbulb"></i> Suggestions populaires</h3>
+                <div class="suggestion-tags" id="suggestionsContainer">
+                    <!-- Suggestions générées par JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="main-content">
+        <div class="container">
+            <!-- HERO SECTION -->
+            <section class="hero fade-in">
+                <div class="hero-bg"></div>
+                <div class="hero-content">
+                    <h2>Des recettes simples comme bonjour</h2>
+                    <p>Découvrez notre collection de recettes faciles et savoureuses. Des plats qui émerveillent sans complexité, pour des moments culinaires réussis à coup sûr.</p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat slide-up delay-1">
+                            <div class="stat-number" id="totalRecipes">0</div>
+                            <div class="stat-label">Recettes</div>
+                        </div>
+                        <div class="stat slide-up delay-2">
+                            <div class="stat-number">15-90</div>
+                            <div class="stat-label">Minutes</div>
+                        </div>
+                        <div class="stat slide-up delay-3">
+                            <div class="stat-number" id="avgRating">4.7</div>
+                            <div class="stat-label">Satisfaction</div>
+                        </div>
+                        <div class="stat slide-up delay-4">
+                            <div class="stat-number">8</div>
+                            <div class="stat-label">Catégories</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CATÉGORIES MOBILE (DÉROULANTE) -->
+            <section class="categories-section mobile-only">
+                <div class="categories-dropdown">
+                    <div class="dropdown-header" id="dropdownToggle">
+                        <h3><i class="fas fa-filter"></i> Parcourir les catégories</h3>
+                        <i class="fas fa-chevron-down dropdown-icon" id="dropdownIcon"></i>
+                    </div>
+                    <div class="categories-list" id="categoriesList">
+                        <div class="categories-grid" id="categoriesContainer">
+                            <!-- Catégories générées par JS -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CATÉGORIES DESKTOP (HORIZONTAL) -->
+            <section class="categories-section desktop-only">
+                <div class="categories-horizontal" id="categoriesDesktop">
+                    <!-- Catégories générées par JS -->
+                </div>
+            </section>
+
+            <!-- RECETTES POPULAIRES -->
+            <section class="recettes-section slide-up">
+                <div class="section-header">
+                    <h2 class="section-title">Les incontournables</h2>
+                    <a href="categories.html?categorie=all" class="see-all">Tout explorer <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="recettes-grid" id="popularRecettes">
+                    <!-- Recettes générées par JS -->
+                </div>
+            </section>
+
+            <!-- RECETTES AFRICAINES -->
+            <section class="recettes-section highlight-section slide-up">
+                <div class="section-header">
+                    <h2 class="section-title">Voyage culinaire africain</h2>
+                    <a href="categories.html?categorie=africain" class="see-all">Découvrir <i class="fas fa-compass"></i></a>
+                </div>
+                <div class="recettes-grid" id="africanRecettes">
+                    <!-- Recettes africaines générées par JS -->
+                </div>
+            </section>
+
+            <!-- RECETTES RAPIDES -->
+            <section class="recettes-section slide-up">
+                <div class="section-header">
+                    <h2 class="section-title">Express & Savoureux</h2>
+                    <span class="see-all">Prêt en 30min max</span>
+                </div>
+                <div class="recettes-grid" id="quickRecettes">
+                    <!-- Recettes rapides générées par JS -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+           
+              
+            <div class="footer-bottom">
+                <p>© 2025 Recettes Faciles. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL FAVORIS -->
+    <div class="modal" id="favoritesModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-heart"></i> Mes Recettes Coup de Cœur</h3>
+                <button class="btn-close-modal" id="closeFavorites" aria-label="Fermer">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="favoritesList">
+                    <!-- Favoris générés par JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL RÉSULTATS RECHERCHE -->
+    <div class="modal" id="searchResultsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-search"></i> Résultats de recherche</h3>
+                <button class="btn-close-modal" id="closeSearchResults" aria-label="Fermer">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="searchResultsContent">
+                    <!-- Résultats générés par JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/database.js"></script>
+    <script src="assets/js/base.js"></script>
+</body>
+</html>

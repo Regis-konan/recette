@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catégories - Recettes Faciles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800;900&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍳</text></svg>">
+    <link rel="stylesheet" href="assets/css/categories.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Recettes Faciles</h1>
+                    <p>Cuisine Simplifiée</p>
+                </div>
+            </a>
+            <a href="index.html" class="back-btn" aria-label="Retour à l'accueil">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="main-content">
+        <div class="container">
+            <!-- BANNIÈRE CATÉGORIE -->
+            <div class="category-hero" id="categoryHeader">
+                <!-- Rempli par JavaScript -->
+            </div>
+
+            <!-- FILTRES RAPIDES -->
+            <div class="quick-filters" id="quickFilters">
+                <!-- Générés par JavaScript -->
+            </div>
+
+            <!-- LISTE DES RECETTES -->
+            <div class="recettes-grid" id="recettesList">
+                <!-- Générées par JavaScript -->
+            </div>
+
+            <!-- AUCUN RÉSULTAT -->
+            <div class="no-results" id="noResults">
+                <i class="fas fa-search"></i>
+                <h3>Aucune recette trouvée</h3>
+                <p>Essayez de modifier vos filtres pour voir plus de résultats.</p>
+                <button class="reset-btn" id="resetFiltersBtn">
+                    <i class="fas fa-redo"></i>
+                    Réinitialiser les filtres
+                </button>
+            </div>
+
+            <!-- PAGINATION -->
+            <div class="pagination" id="pagination">
+                <!-- Générée par JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+           
+            <div class="footer-bottom">
+                <p>© 2025 Recettes Faciles. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toastContainer"></div>
+
+    <script src="assets/js/database.js"></script>
+    <script src="assets/js/base.js"></script>
+    <script src="assets/js/categories.js"></script>
+</body>
+</html>
