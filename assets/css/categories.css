@@ -752,29 +752,10 @@ body {
     background: var(--primary-dark);
 }
 
-/* MODE SOMBRE */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --cream: #1A1A1A;
-        --cream-dark: #2D2D2D;
-        --white: #2D2D2D;
-        --dark: #FFFFFF;
-        --dark-light: #CCCCCC;
-        --text: #EEEEEE;
-        --text-light: #AAAAAA;
-        --border: #444444;
-    }
-
-    .header {
-        background: rgba(45, 45, 45, 0.95);
-    }
-
-    .recette-card {
-        background: #363636;
-    }
-
-    .filter-btn {
-        background: #363636;
-        color: var(--text);
-    }
+/* Style pour la description du footer */
+.footer-description {
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
