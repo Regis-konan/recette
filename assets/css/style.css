@@ -823,7 +823,72 @@ body {
     background: linear-gradient(to right, var(--primary-red), var(--accent));
 }
 
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
 
+.footer-logo {
+    text-align: center;
+}
+
+.footer-logo .logo-icon {
+    margin: 0 auto 20px;
+}
+
+.footer-logo h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.footer-logo p {
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.link-group h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: var(--white);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.link-group h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--primary-red);
+}
+
+.link-group a {
+    display: block;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: var(--transition);
+    font-size: 14px;
+}
+
+.link-group a:hover {
+    color: var(--primary-red);
+    transform: translateX(5px);
+}
 
 .footer-bottom {
     text-align: center;
@@ -1106,7 +1171,6 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    /* border-left: 4px solid var(--primary-red); */
     max-width: 300px;
 }
 
@@ -1318,38 +1382,4 @@ body {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.9rem;
     line-height: 1.5;
-}
-
-/* Mode sombre */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --cream: #1A1A1A;
-        --cream-dark: #2D2D2D;
-        --white: #2D2D2D;
-        --dark: #FFFFFF;
-        --dark-light: #CCCCCC;
-        --text: #EEEEEE;
-        --text-light: #AAAAAA;
-        --border: #444444;
-    }
-
-    .header {
-        background: rgba(45, 45, 45, 0.95);
-    }
-
-    .recette-card {
-        background: #363636;
-    }
-
-    .filter-btn {
-        background: #363636;
-        color: var(--text);
-    }
-    
-    .stat,
-    .category-item,
-    .category-horizontal-item,
-    .modal-recette-card {
-        background: #363636;
-    }
 }
