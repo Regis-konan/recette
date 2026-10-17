@@ -1,0 +1,1 @@
+{"name":"outils-nettoyage","version":"1.0.0","private":true,"description":"Audit, optimisation des images et migration des données de Recettes Faciles","dependencies":{"sharp":"^0.35.5"}}
